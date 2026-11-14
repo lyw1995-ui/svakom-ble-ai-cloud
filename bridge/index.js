@@ -72,7 +72,7 @@ const server = http.createServer(async (req, res) => {
         service: "svakom-ble-ai-cloud",
         secretConfigured: !!SECRET,
         mcp: "/mcp?secret=...",
-        relayPoll: "/relay/poll?secret=...",
+        relayPoll: "/toy-next?secret=...",
         relayStatus: "/relay/status?secret=...",
         queue: queue.size(),
         status: queue.getStatus()
@@ -92,6 +92,7 @@ const server = http.createServer(async (req, res) => {
       "/relay/poll",
       "/poll",
       "/next",
+      "/toy-next",
       "/command",
       "/api/poll",
       "/api/relay/poll"
@@ -111,6 +112,7 @@ const server = http.createServer(async (req, res) => {
       "/relay/status",
       "/status",
       "/api/status",
+      "/toy-status",
       "/api/relay/status"
     ]);
 
